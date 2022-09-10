@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import MyComponenet from "./MyComponent";
+import img from '../image/6ndudg.jpg'
 
 
 // const url = "https://jsonplaceholder.typicode.com/users"
@@ -40,33 +41,36 @@ import MyComponenet from "./MyComponent";
 //     )
 // }
 
-const url = "https://jsonplaceholder.typicode.com/users"
-const Car = () => {
-    const [user, setUser] = useState([])
+// const url = "https://jsonplaceholder.typicode.com/users"
+// const Car = () => {
+//     const [user, setUser] = useState([])
 
-    useEffect(() => {
-        const getUser = async() => {
-            const resp = await fetch(url)
-            const data = await resp.json()
-            setUser(data)
-        }
-        getUser()
-    }, [])
-    return(
-        <div>
-            {user.map((user) => {
-                const {id, username, email, name} = user;
-                console.log(user)
-                return(
-                    <div key={id}>
-                        <div>{username}</div>
-                        <h2>{email}</h2>
-                        <p>{name}</p>
-                    </div>
-                )
-            })}
-        </div>
-    )
+//     useEffect(() => {
+//         const getUser = async() => {
+//             const resp = await fetch(url)
+//             const data = await resp.json()
+//             setUser(data)
+//         }
+//         getUser()
+//     }, [])
+//     return(
+//         <div>
+//             <div>
+//                 {/* <img src={img} alt="//" /> */}
+//             </div>
+//             {user.map((user) => {
+//                 const {id, username, email, name} = user;
+//                 console.log(user)
+//                 return(
+//                     <div key={id}>
+//                         <div>{username}</div>
+//                         <h2>{email}</h2>
+//                         <p>{name}</p>
+//                     </div>
+//                 )
+//             })}
+//         </div>
+//     )
 
-}
-export default Car
+// }
+// export default Car
